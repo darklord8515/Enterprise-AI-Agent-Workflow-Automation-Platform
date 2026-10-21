@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Secrets and local config
+.env
+.env.*
+!.env.example
+
+# Runtime data (uploaded documents, registry)
+data/
+
+# Eval runs (keep the committed reference result only)
+eval/results/*.json
+!eval/results/mock-reference.json
+!eval/results/azure-openai-inmemory-search-reference.json
+!eval/results/azure-reference.json
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Azure portal exports (contain subscription ids)
+*.zip

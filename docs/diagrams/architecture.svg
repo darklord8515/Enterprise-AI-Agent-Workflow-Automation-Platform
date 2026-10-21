@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="700" viewBox="0 0 1320 700">
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#8b867c"/></marker>
+  <marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2b4c7e"/></marker>
+</defs>
+<rect x="0.5" y="0.5" width="1319" height="699" rx="18" fill="#f5f4f0" stroke="#d9d5cc"/>
+<text x="40" y="52" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#1b1a17">System architecture</text><text x="40" y="78" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#55514a">FastAPI service, one LangGraph workflow, provider interfaces with Azure and mock implementations.</text><text x="40" y="128" font-family="'IBM Plex Mono', Consolas, monospace" font-size="11" font-weight="500" fill="#8b867c" text-anchor="start" >CLIENTS</text>
+<rect x="40" y="140" width="210" height="86" rx="12" fill="#ffffff" stroke="#d9d5cc" stroke-width="1.3"/>
+<text x="58" y="168" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#1b1a17" text-anchor="start" >Web UI</text>
+<text x="58" y="190" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >Single page served at /</text>
+<text x="58" y="209" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >upload · run · review</text>
+<rect x="40" y="246" width="210" height="86" rx="12" fill="#ffffff" stroke="#d9d5cc" stroke-width="1.3"/>
+<text x="58" y="274" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#1b1a17" text-anchor="start" >API clients</text>
+<text x="58" y="296" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >curl · scripts</text>
+<text x="58" y="315" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >Swagger UI at /docs</text>
+<text x="310" y="128" font-family="'IBM Plex Mono', Consolas, monospace" font-size="11" font-weight="500" fill="#8b867c" text-anchor="start" >API LAYER</text>
+<rect x="310" y="140" width="250" height="210" rx="12" fill="#ffffff" stroke="#d9d5cc" stroke-width="1.3"/>
+<rect x="316" y="156" width="3" height="178" rx="1.5" fill="#2b4c7e"/>
+<text x="328" y="168" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#1b1a17" text-anchor="start" >FastAPI</text>
+<text x="328" y="190" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >X-API-Key → principal</text>
+<text x="328" y="209" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >Pydantic request validation</text>
+<text x="328" y="228" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >Upload allow-list, 5 MB cap,</text>
+<text x="328" y="247" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >  magic-byte &amp; UTF-8 checks</text>
+<text x="328" y="266" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >Owner-scoped documents &amp; tasks</text>
+<text x="328" y="285" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >Typed JSON errors</text>
+<text x="328" y="304" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >Structured JSON logs</text>
+<rect x="310" y="380" width="250" height="90" rx="12" fill="#faf9f6" stroke="#d9d5cc" stroke-width="1.3"/>
+<text x="328" y="408" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#1b1a17" text-anchor="start" >Document registry</text>
+<text x="328" y="430" font-family="'IBM Plex Mono', Consolas, monospace" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >data/uploads/ + documents.json</text>
+<text x="328" y="449" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >server-generated ids</text>
+<path d="M435 350 L435 378" fill="none" stroke="#8b867c" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M250 183 L308 183" fill="none" stroke="#8b867c" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M250 289 L308 289" fill="none" stroke="#8b867c" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="660" y="128" font-family="'IBM Plex Mono', Consolas, monospace" font-size="11" font-weight="500" fill="#8b867c" text-anchor="start" >SERVICES</text>
+<rect x="660" y="140" width="270" height="106" rx="12" fill="#ffffff" stroke="#d9d5cc" stroke-width="1.3"/>
+<text x="678" y="168" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#1b1a17" text-anchor="start" >Ingestion</text>
+<text x="678" y="190" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >parse → chunk → embed → index</text>
+<text x="678" y="209" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >txt · md · pdf, page / section kept</text>
+<text x="678" y="228" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >injection heuristics flag chunks</text>
+<rect x="660" y="266" width="270" height="74" rx="12" fill="#ffffff" stroke="#d9d5cc" stroke-width="1.3"/>
+<text x="678" y="294" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#1b1a17" text-anchor="start" >Task service</text>
+<text x="678" y="316" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >async run · poll GET /tasks/{id}</text>
+<rect x="660" y="370" width="270" height="182" rx="12" fill="#ffffff" stroke="#d9d5cc" stroke-width="1.3"/>
+<rect x="666" y="386" width="3" height="150" rx="1.5" fill="#2b4c7e"/>
+<text x="678" y="398" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#1b1a17" text-anchor="start" >LangGraph workflow</text>
+<text x="678" y="420" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >Planner</text>
+<text x="678" y="439" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >Retriever</text>
+<text x="678" y="458" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >Analyst</text>
+<text x="678" y="477" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >Evidence reviewer</text>
+<text x="678" y="496" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >Router  (bounded revisions)</text>
+<text x="678" y="515" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >Report generator</text>
+<text x="830" y="415" font-family="'IBM Plex Mono', Consolas, monospace" font-size="11" font-weight="400" fill="#8b867c" text-anchor="start" >typed state</text>
+<text x="830" y="432" font-family="'IBM Plex Mono', Consolas, monospace" font-size="11" font-weight="400" fill="#8b867c" text-anchor="start" >trace + usage</text>
+<path d="M560 190 L658 190" fill="none" stroke="#8b867c" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="584" y="161" width="50" height="20" rx="5" fill="#ffffff"/>
+<text x="609" y="175" font-family="'IBM Plex Mono', Consolas, monospace" font-size="11.5" font-weight="400" fill="#55514a" text-anchor="middle" >ingest</text>
+<path d="M560 303 L658 303" fill="none" stroke="#8b867c" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="581" y="274" width="57" height="20" rx="5" fill="#ffffff"/>
+<text x="609" y="288" font-family="'IBM Plex Mono', Consolas, monospace" font-size="11.5" font-weight="400" fill="#55514a" text-anchor="middle" >analyze</text>
+<path d="M795 340 L795 368" fill="none" stroke="#8b867c" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<line x1="965" y1="175" x2="965" y2="616" stroke="#2b4c7e" stroke-width="2" stroke-opacity="0.35"/>
+<text x="955" y="327" font-family="'IBM Plex Mono', Consolas, monospace" font-size="11" font-weight="400" fill="#2b4c7e" text-anchor="middle" transform="rotate(-90 955 327)">provider interfaces</text>
+<path d="M930 193 L965 193" fill="none" stroke="#8b867c" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M930 461 L965 461" fill="none" stroke="#8b867c" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="1000" y="112" width="290" height="398" rx="14" fill="#e9eef6" fill-opacity="0.55" stroke="#2b4c7e" stroke-opacity="0.35"/>
+<text x="1018" y="134" font-family="'IBM Plex Mono', Consolas, monospace" font-size="11" font-weight="500" fill="#2b4c7e" text-anchor="start" >PROVIDER_MODE=azure</text>
+<rect x="1016" y="148" width="258" height="98" rx="12" fill="#ffffff" stroke="#d9d5cc" stroke-width="1.3"/>
+<text x="1034" y="176" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#1b1a17" text-anchor="start" >Azure OpenAI · chat</text>
+<text x="1034" y="198" font-family="'IBM Plex Mono', Consolas, monospace" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >gpt-5-mini</text>
+<text x="1034" y="217" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >structured outputs (Pydantic)</text>
+<rect x="1016" y="262" width="258" height="80" rx="12" fill="#ffffff" stroke="#d9d5cc" stroke-width="1.3"/>
+<text x="1034" y="290" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#1b1a17" text-anchor="start" >Azure OpenAI · embeddings</text>
+<text x="1034" y="312" font-family="'IBM Plex Mono', Consolas, monospace" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >text-embedding-3-small · 1536-d</text>
+<rect x="1016" y="358" width="258" height="136" rx="12" fill="#ffffff" stroke="#d9d5cc" stroke-width="1.3"/>
+<text x="1034" y="386" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#1b1a17" text-anchor="start" >Azure AI Search</text>
+<text x="1034" y="408" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >HNSW cosine + BM25</text>
+<text x="1034" y="427" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >hybrid ranking (RRF)</text>
+<text x="1034" y="446" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >OData filters:</text>
+<text x="1034" y="465" font-family="'IBM Plex Mono', Consolas, monospace" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >owner · supplier · category</text>
+<path d="M965 197 L1014 197" fill="none" stroke="#2b4c7e" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow-accent)"/>
+<path d="M965 302 L1014 302" fill="none" stroke="#2b4c7e" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow-accent)"/>
+<path d="M965 426 L1014 426" fill="none" stroke="#2b4c7e" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow-accent)"/>
+<rect x="1000" y="530" width="290" height="96" rx="12" fill="#faf9f6" stroke="#d9d5cc" stroke-width="1.3" stroke-dasharray="6 5"/>
+<text x="1018" y="558" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#1b1a17" text-anchor="start" >Mock mode  (local · CI)</text>
+<text x="1018" y="580" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >heuristic analyst · hashed embeddings</text>
+<text x="1018" y="599" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >in-memory BM25 + cosine (RRF)</text>
+<path d="M965 580 L998 580" fill="none" stroke="#8b867c" stroke-width="1.6" stroke-linejoin="round" stroke-dasharray="5 5" marker-end="url(#arrow)"/>
+<text x="40" y="662" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >No silent fallback: in azure mode every component is a real Azure client and failures surface as typed errors (auth, rate limit, deployment not found, index schema mismatch).</text>
+</svg>

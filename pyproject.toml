@@ -1,0 +1,75 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "procurement-agent"
+version = "0.1.0"
+description = "Enterprise AI Agent Workflow Automation Platform: evidence-grounded supplier evaluation with LangGraph, Azure OpenAI and Azure AI Search."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Fayez" }]
+requires-python = ">=3.11"
+keywords = ["langgraph", "azure-openai", "azure-ai-search", "rag", "agents", "fastapi", "procurement"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: MIT License",
+    "Framework :: FastAPI",
+]
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "pydantic>=2.7",
+    "pydantic-settings>=2.3",
+    "python-multipart>=0.0.9",
+    "langgraph>=1.0,<2",
+    "openai>=1.68",
+    "azure-search-documents>=11.5",
+    "azure-identity>=1.19",
+    "aiohttp>=3.9",
+    "pypdf>=5.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "pytest-asyncio>=0.24",
+    "httpx>=0.27",
+    "ruff>=0.6",
+]
+
+[project.urls]
+Homepage = "https://github.com/darklord8515/Enterprise-AI-Agent-Workflow-Automation-Platform"
+Repository = "https://github.com/darklord8515/Enterprise-AI-Agent-Workflow-Automation-Platform"
+Issues = "https://github.com/darklord8515/Enterprise-AI-Agent-Workflow-Automation-Platform/issues"
+
+[project.scripts]
+procurement-agent = "procurement_agent.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+procurement_agent = ["web/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+markers = [
+    "azure: tests that call real Azure services (skipped unless RUN_AZURE_TESTS=1)",
+]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "S"]
+ignore = ["S101", "B008", "E501"]  # B008: FastAPI Depends idiom; E501: formatter owns wrapping
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S105", "S106"]

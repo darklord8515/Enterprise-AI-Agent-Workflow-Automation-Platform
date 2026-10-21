@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="690" viewBox="0 0 1400 690">
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#8b867c"/></marker>
+  <marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2b4c7e"/></marker>
+</defs>
+<rect x="0.5" y="0.5" width="1399" height="689" rx="18" fill="#f5f4f0" stroke="#d9d5cc"/>
+<text x="40" y="52" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#1b1a17">LangGraph workflow</text><text x="40" y="78" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#55514a">One explicit StateGraph. Each node is a single-responsibility step, not an autonomous agent.</text><rect x="39.0" y="299.0" width="58" height="30" rx="15" fill="#1b1a17"/>
+<text x="68" y="319.0" font-family="'IBM Plex Mono', Consolas, monospace" font-size="12" font-weight="500" fill="#fff" text-anchor="middle" >START</text>
+<rect x="120" y="250" width="172" height="128" rx="12" fill="#ffffff" stroke="#d9d5cc" stroke-width="1.3"/>
+<text x="138" y="278" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#1b1a17" text-anchor="start" >Planner</text>
+<text x="138" y="300" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >request → checks</text>
+<text x="138" y="319" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >explicit or from policy</text>
+<rect x="138" y="346" width="154" height="20" rx="10" fill="#e9eef6" stroke="#2b4c7e" stroke-opacity="0.35"/>
+<text x="215.0" y="360" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="500" fill="#2b4c7e" text-anchor="middle" >LLM · structured output</text>
+<rect x="322" y="250" width="172" height="128" rx="12" fill="#ffffff" stroke="#d9d5cc" stroke-width="1.3"/>
+<text x="340" y="278" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#1b1a17" text-anchor="start" >Retriever</text>
+<text x="340" y="300" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >hybrid search per check</text>
+<text x="340" y="319" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >owner + supplier filter</text>
+<rect x="340" y="346" width="106" height="20" rx="10" fill="#e4f1f1" stroke="#2f6f73" stroke-opacity="0.35"/>
+<text x="393.0" y="360" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="500" fill="#2f6f73" text-anchor="middle" >Azure AI Search</text>
+<rect x="524" y="250" width="172" height="128" rx="12" fill="#ffffff" stroke="#d9d5cc" stroke-width="1.3"/>
+<text x="542" y="278" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#1b1a17" text-anchor="start" >Analyst</text>
+<text x="542" y="300" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >status, verbatim quotes,</text>
+<text x="542" y="319" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >gaps &amp; follow-ups</text>
+<rect x="542" y="346" width="154" height="20" rx="10" fill="#e9eef6" stroke="#2b4c7e" stroke-opacity="0.35"/>
+<text x="619.0" y="360" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="500" fill="#2b4c7e" text-anchor="middle" >LLM · structured output</text>
+<rect x="726" y="250" width="172" height="128" rx="12" fill="#ffffff" stroke="#d9d5cc" stroke-width="1.3"/>
+<rect x="732" y="266" width="3" height="96" rx="1.5" fill="#2b4c7e"/>
+<text x="744" y="278" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#1b1a17" text-anchor="start" >Evidence reviewer</text>
+<text x="744" y="300" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >citations retrieved?</text>
+<text x="744" y="319" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >quote verbatim? supplier?</text>
+<rect x="744" y="346" width="124" height="20" rx="10" fill="#eceef2" stroke="#5a6273" stroke-opacity="0.35"/>
+<text x="806.0" y="360" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="500" fill="#5a6273" text-anchor="middle" >deterministic code</text>
+<path d="M292 314.0 L320 314.0" fill="none" stroke="#8b867c" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M494 314.0 L522 314.0" fill="none" stroke="#8b867c" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M696 314.0 L724 314.0" fill="none" stroke="#8b867c" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M100 314.0 L118 314.0" fill="none" stroke="#8b867c" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M1010 252.0 L1072 314.0 L1010 376.0 L948 314.0 z" fill="#ffffff" stroke="#2b4c7e" stroke-width="1.6"/>
+<text x="1010" y="312.0" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#1b1a17" text-anchor="middle" >Router</text>
+<text x="1010" y="330.0" font-family="'IBM Plex Mono', Consolas, monospace" font-size="11.5" font-weight="400" fill="#8b867c" text-anchor="middle" >route?</text>
+<path d="M898 314.0 L946 314.0" fill="none" stroke="#8b867c" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="1160" y="250" width="172" height="128" rx="12" fill="#ffffff" stroke="#d9d5cc" stroke-width="1.3"/>
+<text x="1178" y="278" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#1b1a17" text-anchor="start" >Report generator</text>
+<text x="1178" y="300" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >findings, citations,</text>
+<text x="1178" y="319" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >warnings, trace, usage</text>
+<rect x="1178" y="346" width="124" height="20" rx="10" fill="#eceef2" stroke="#5a6273" stroke-opacity="0.35"/>
+<text x="1240.0" y="360" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="500" fill="#5a6273" text-anchor="middle" >deterministic code</text>
+<path d="M1072 314.0 L1158 314.0" fill="none" stroke="#1e7148" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="1062" y="287.0" width="95" height="20" rx="5" fill="#ffffff"/>
+<text x="1110" y="301.0" font-family="'IBM Plex Mono', Consolas, monospace" font-size="11.5" font-weight="400" fill="#1e7148" text-anchor="middle" >all supported</text>
+<rect x="1225.0" y="455" width="42" height="30" rx="15" fill="#1b1a17"/>
+<text x="1246" y="475" font-family="'IBM Plex Mono', Consolas, monospace" font-size="12" font-weight="500" fill="#fff" text-anchor="middle" >END</text>
+<path d="M1246 378 L1246 453" fill="none" stroke="#8b867c" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M1010 252.0 L1010 168 L408 168 L408 248" fill="none" stroke="#a8521c" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="512" y="138" width="390" height="22" rx="6" fill="#f8ece2"/>
+<text x="707" y="154" font-family="'IBM Plex Mono', Consolas, monospace" font-size="11.5" font-weight="400" fill="#a8521c" text-anchor="middle" >revise: unsupported &amp; revisions &lt; MAX_REVISIONS (default 1)</text>
+<text x="420" y="188" font-family="'IBM Plex Mono', Consolas, monospace" font-size="11.5" font-weight="400" fill="#8b867c" text-anchor="start" >broader query, 2× top-k,</text>
+<text x="420" y="204" font-family="'IBM Plex Mono', Consolas, monospace" font-size="11.5" font-weight="400" fill="#8b867c" text-anchor="start" >reviewer feedback to analyst</text>
+<rect x="910" y="460" width="200" height="112" rx="12" fill="#faf9f6" stroke="#d9d5cc" stroke-width="1.3"/>
+<text x="928" y="488" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#1b1a17" text-anchor="start" >Insufficient-evidence</text>
+<text x="928" y="510" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >downgrade unverifiable</text>
+<text x="928" y="529" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >findings, keep notes</text>
+<rect x="928" y="540" width="124" height="20" rx="10" fill="#eceef2" stroke="#5a6273" stroke-opacity="0.35"/>
+<text x="990.0" y="554" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="500" fill="#5a6273" text-anchor="middle" >deterministic code</text>
+<path d="M1010 376.0 L1010 458" fill="none" stroke="#5a6273" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="950" y="409" width="121" height="20" rx="5" fill="#ffffff"/>
+<text x="1010" y="423" font-family="'IBM Plex Mono', Consolas, monospace" font-size="11.5" font-weight="400" fill="#5a6273" text-anchor="middle" >still unsupported</text>
+<path d="M1110 516 L1190 516 L1190 380" fill="none" stroke="#5a6273" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="40" y="602" width="1320" height="56" rx="12" fill="#ffffff" stroke="#d9d5cc"/>
+<text x="60" y="626" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1b1a17" text-anchor="start" >WorkflowState (TypedDict)</text>
+<text x="60" y="645" font-family="'IBM Plex Mono', Consolas, monospace" font-size="11.5" font-weight="400" fill="#55514a" text-anchor="start" >task · supplier_id · owner · checks · evidence{} · assessments{} · findings{} · review_issues · targets · revision_count · route · warnings[+] · trace[+] · usage(+)</text>
+<text x="1340" y="626" font-family="'IBM Plex Mono', Consolas, monospace" font-size="11.5" font-weight="400" fill="#8b867c" text-anchor="end" >recursion_limit = 40 (hard loop guard)</text>
+</svg>

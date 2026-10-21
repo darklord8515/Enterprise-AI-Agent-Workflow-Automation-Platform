@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="640" viewBox="0 0 1320 640">
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#8b867c"/></marker>
+  <marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2b4c7e"/></marker>
+</defs>
+<rect x="0.5" y="0.5" width="1319" height="639" rx="18" fill="#f5f4f0" stroke="#d9d5cc"/>
+<text x="40" y="52" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#1b1a17">Evidence verification</text><text x="40" y="78" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#55514a">The reviewer is code, not a prompt. A conclusion survives only if its evidence can be checked against what was retrieved.</text><rect x="40" y="150" width="170" height="104" rx="12" fill="#faf9f6" stroke="#d9d5cc" stroke-width="1.3"/>
+<text x="58" y="178" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#1b1a17" text-anchor="start" >Model citation</text>
+<text x="58" y="200" font-family="'IBM Plex Mono', Consolas, monospace" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >chunk_id + quote</text>
+<text x="58" y="219" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >from the analyst</text>
+<rect x="270" y="150" width="220" height="104" rx="12" fill="#ffffff" stroke="#d9d5cc" stroke-width="1.3"/>
+<rect x="276" y="166" width="3" height="72" rx="1.5" fill="#2b4c7e"/>
+<text x="288" y="178" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#1b1a17" text-anchor="start" >1  Retrieved?</text>
+<text x="288" y="200" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >chunk was returned for</text>
+<text x="288" y="219" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >this requirement</text>
+<path d="M210 202.0 L268 202.0" fill="none" stroke="#8b867c" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M380.0 254 L380.0 318" fill="none" stroke="#a8521c" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="368" y="277" width="25" height="20" rx="5" fill="#ffffff"/>
+<text x="380.0" y="291" font-family="'IBM Plex Mono', Consolas, monospace" font-size="11.5" font-weight="400" fill="#a8521c" text-anchor="middle" >no</text>
+<rect x="530" y="150" width="220" height="104" rx="12" fill="#ffffff" stroke="#d9d5cc" stroke-width="1.3"/>
+<rect x="536" y="166" width="3" height="72" rx="1.5" fill="#2b4c7e"/>
+<text x="548" y="178" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#1b1a17" text-anchor="start" >2  Verbatim?</text>
+<text x="548" y="200" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >quote found in chunk text</text>
+<text x="548" y="219" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >(whitespace/case normalised)</text>
+<path d="M490 202.0 L528 202.0" fill="none" stroke="#1e7148" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="494" y="177.0" width="31" height="20" rx="5" fill="#ffffff"/>
+<text x="510.0" y="191.0" font-family="'IBM Plex Mono', Consolas, monospace" font-size="11.5" font-weight="400" fill="#1e7148" text-anchor="middle" >yes</text>
+<path d="M640.0 254 L640.0 318" fill="none" stroke="#a8521c" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="628" y="277" width="25" height="20" rx="5" fill="#ffffff"/>
+<text x="640.0" y="291" font-family="'IBM Plex Mono', Consolas, monospace" font-size="11.5" font-weight="400" fill="#a8521c" text-anchor="middle" >no</text>
+<rect x="790" y="150" width="220" height="104" rx="12" fill="#ffffff" stroke="#d9d5cc" stroke-width="1.3"/>
+<rect x="796" y="166" width="3" height="72" rx="1.5" fill="#2b4c7e"/>
+<text x="808" y="178" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#1b1a17" text-anchor="start" >3  Supplier source?</text>
+<text x="808" y="200" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >policy text cannot prove</text>
+<text x="808" y="219" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >supplier compliance</text>
+<path d="M750 202.0 L788 202.0" fill="none" stroke="#1e7148" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="754" y="177.0" width="31" height="20" rx="5" fill="#ffffff"/>
+<text x="770.0" y="191.0" font-family="'IBM Plex Mono', Consolas, monospace" font-size="11.5" font-weight="400" fill="#1e7148" text-anchor="middle" >yes</text>
+<path d="M900.0 254 L900.0 318" fill="none" stroke="#a8521c" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="888" y="277" width="25" height="20" rx="5" fill="#ffffff"/>
+<text x="900.0" y="291" font-family="'IBM Plex Mono', Consolas, monospace" font-size="11.5" font-weight="400" fill="#a8521c" text-anchor="middle" >no</text>
+<rect x="1060" y="150" width="220" height="104" rx="12" fill="#e7f2eb" stroke="#1e7148" stroke-width="1.3"/>
+<text x="1078" y="178" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#1b1a17" text-anchor="start" >Valid evidence</text>
+<text x="1078" y="200" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >shown with file, section,</text>
+<text x="1078" y="219" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >page and chunk id</text>
+<path d="M1010 202.0 L1058 202.0" fill="none" stroke="#1e7148" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="1019" y="177.0" width="31" height="20" rx="5" fill="#ffffff"/>
+<text x="1035.0" y="191.0" font-family="'IBM Plex Mono', Consolas, monospace" font-size="11.5" font-weight="400" fill="#1e7148" text-anchor="middle" >yes</text>
+<rect x="270" y="320" width="740" height="56" rx="12" fill="#f8ece2" stroke="#a8521c" stroke-opacity="0.45"/>
+<text x="290" y="346" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#a8521c" text-anchor="start" >Citation removed</text>
+<text x="290" y="365" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >and a reviewer note is attached to the finding, so the removal is visible in the report</text>
+<rect x="1060" y="270" width="220" height="70" rx="12" fill="#fbf3dc" stroke="#8a6100" stroke-opacity="0.45"/>
+<text x="1076" y="294" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#8a6100" text-anchor="start" >Flagged chunk cited?</text>
+<text x="1076" y="313" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#55514a" text-anchor="start" >kept, with a &quot;verify manually&quot;</text>
+<text x="1076" y="330" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#55514a" text-anchor="start" >note (possible injection)</text>
+<path d="M1170 254 L1170 268" fill="none" stroke="#8b867c" stroke-width="1.6" stroke-linejoin="round" stroke-dasharray="5 5" marker-end="url(#arrow)"/>
+<text x="40" y="432" font-family="'IBM Plex Mono', Consolas, monospace" font-size="11" font-weight="500" fill="#8b867c" text-anchor="start" >THEN, PER FINDING</text>
+<rect x="40" y="448" width="260" height="120" rx="12" fill="#ffffff" stroke="#d9d5cc" stroke-width="1.3"/>
+<rect x="46" y="464" width="3" height="88" rx="1.5" fill="#2b4c7e"/>
+<text x="58" y="476" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#1b1a17" text-anchor="start" >Status met or gap…</text>
+<text x="58" y="498" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >…with zero valid supplier</text>
+<text x="58" y="517" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >citations is unsupported</text>
+<rect x="380" y="448" width="280" height="120" rx="12" fill="#ffffff" stroke="#d9d5cc" stroke-width="1.3"/>
+<text x="398" y="476" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#1b1a17" text-anchor="start" >Bounded revision</text>
+<text x="398" y="498" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >re-retrieve with a broader query,</text>
+<text x="398" y="517" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >re-analyse with reviewer feedback</text>
+<text x="398" y="536" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >(MAX_REVISIONS, default 1)</text>
+<rect x="800" y="448" width="480" height="120" rx="12" fill="#eceef2" stroke="#5a6273" stroke-width="1.3"/>
+<text x="818" y="476" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#1b1a17" text-anchor="start" >insufficient_evidence</text>
+<text x="818" y="498" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >Still unsupported after the last revision: reported as insufficient</text>
+<text x="818" y="517" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >evidence with the reasons. Absence of contrary information is</text>
+<text x="818" y="536" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >never treated as compliance.</text>
+<path d="M300 508.0 L378 508.0" fill="none" stroke="#a8521c" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M660 508.0 L798 508.0" fill="none" stroke="#5a6273" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="669" y="481.0" width="121" height="20" rx="5" fill="#ffffff"/>
+<text x="729" y="495.0" font-family="'IBM Plex Mono', Consolas, monospace" font-size="11.5" font-weight="400" fill="#5a6273" text-anchor="middle" >still unsupported</text>
+<text x="40" y="606" font-family="'IBM Plex Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#55514a" text-anchor="start" >Tested with scripted model outputs: fabricated chunk ids, paraphrased quotes and policy-as-proof are all caught (tests/test_workflow.py).</text>
+</svg>

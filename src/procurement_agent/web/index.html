@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Supplier Evidence Review</title>
+  <meta name="description" content="Evidence-grounded supplier evaluation with LangGraph, Azure OpenAI and Azure AI Search.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/app.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232b4c7e'/%3E%3Cpath d='M9 11h10M9 16h7' stroke='white' stroke-width='2.4' stroke-linecap='round'/%3E%3Cpath d='M16 22l3 3 6-7' stroke='white' stroke-width='2.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <script>
+    try { const t = localStorage.getItem("ser-theme"); if (t) document.documentElement.dataset.theme = t; } catch (_) {}
+  </script>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 15V4M7.5 8.5 12 4l4.5 4.5M5 15v3.5A1.5 1.5 0 0 0 6.5 20h11a1.5 1.5 0 0 0 1.5-1.5V15"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-gap" viewBox="0 0 24 24"><path d="M12 8.5v4.5M12 16.6v.01"/><path d="M10.3 3.9 2.6 17.3A2 2 0 0 0 4.3 20.3h15.4a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></symbol>
+    <symbol id="i-unknown" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.5 12h7"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="m10.8 12.2 8.7-8.7M16 7l2.5 2.5M14 9l2 2"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 19h14"/></symbol>
+    <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 9V3.5h10V9M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"/><path d="M7 14h10v6.5H7z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.4 7.5 9.5 4.3-1.1 7.5-4.9 7.5-9.5V6z"/><path d="M12 8v4.5M12 15.6v.01"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10-6.5z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-loop" viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 13.7-5.6L20 8.5M20 4v4.5h-4.5M20 12a8 8 0 0 1-13.7 5.6L4 15.5M4 20v-4.5h4.5"/></symbol>
+  </svg>
+
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Supplier Evidence Review">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32"><path d="M9 11h10M9 16h7"/><path d="M16 22l3 3 6-7"/></svg>
+      </span>
+      <span class="brand-text">
+        <span class="brand-name">Evidence Review</span>
+        <span class="brand-sub">Supplier procurement assessment</span>
+      </span>
+    </a>
+    <div class="topbar-actions">
+      <span class="env-pill" id="env-pill" data-state="pending" title="Backend status">
+        <span class="env-dot"></span><span id="env-text">Connecting</span>
+      </span>
+      <button class="btn ghost sm" id="key-btn" type="button" hidden>
+        <svg class="ic"><use href="#i-key"/></svg><span id="key-btn-text">API key</span>
+      </button>
+      <button class="icon-btn" id="theme-btn" type="button" aria-label="Toggle colour theme">
+        <svg class="ic ic-sun"><use href="#i-sun"/></svg><svg class="ic ic-moon"><use href="#i-moon"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <section class="panel" aria-labelledby="docs-title">
+        <div class="panel-head">
+          <span class="step">1</span>
+          <h2 id="docs-title">Documents</h2>
+          <button class="btn link sm" id="sample-btn" type="button" hidden>Load sample set</button>
+        </div>
+
+        <div class="field">
+          <span class="label" id="cat-label">Document type</span>
+          <div class="seg" role="radiogroup" aria-labelledby="cat-label" id="cat-seg">
+            <button type="button" role="radio" aria-checked="true" data-value="supplier">Supplier evidence</button>
+            <button type="button" role="radio" aria-checked="false" data-value="policy">Company policy</button>
+            <span class="seg-thumb" aria-hidden="true"></span>
+          </div>
+        </div>
+
+        <label class="field" id="supplier-field">
+          <span class="label">Supplier ID</span>
+          <input id="supplier-input" type="text" placeholder="e.g. halvorsen" autocomplete="off" spellcheck="false" maxlength="64">
+        </label>
+
+        <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-describedby="dz-hint">
+          <svg class="ic dz-icon"><use href="#i-upload"/></svg>
+          <span class="dz-title">Drop files or <u>browse</u></span>
+          <span class="dz-hint" id="dz-hint">PDF, Markdown or text · up to 5 MB each</span>
+          <input type="file" id="file-input" multiple accept=".pdf,.md,.txt" hidden>
+        </div>
+
+        <ul class="doc-list" id="doc-list" aria-live="polite"></ul>
+        <p class="muted small empty-docs" id="docs-empty">No documents yet.</p>
+
+        <button class="btn secondary block" id="index-btn" type="button" disabled>Index documents</button>
+      </section>
+
+      <section class="panel" aria-labelledby="run-title">
+        <div class="panel-head">
+          <span class="step">2</span>
+          <h2 id="run-title">Evaluation</h2>
+        </div>
+
+        <label class="field">
+          <span class="label">Supplier</span>
+          <div class="select-wrap">
+            <select id="supplier-select"><option value="">Upload supplier documents first</option></select>
+            <svg class="ic"><use href="#i-chevron"/></svg>
+          </div>
+        </label>
+
+        <label class="field">
+          <span class="label">Request</span>
+          <textarea id="task-input" rows="3" maxlength="2000">Evaluate this supplier against our procurement policy.</textarea>
+        </label>
+
+        <div class="field">
+          <span class="label" id="req-label">Requirements</span>
+          <div class="seg" role="radiogroup" aria-labelledby="req-label" id="req-seg">
+            <button type="button" role="radio" aria-checked="true" data-value="policy">Extract from policy</button>
+            <button type="button" role="radio" aria-checked="false" data-value="custom">Custom list</button>
+            <span class="seg-thumb" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="collapsible" id="req-wrap" data-open="false">
+          <div class="collapsible-inner">
+            <textarea id="req-input" rows="5" placeholder="One requirement per line, e.g.&#10;The supplier must hold ISO 9001 certification."></textarea>
+          </div>
+        </div>
+
+        <button class="btn primary block" id="run-btn" type="button" disabled>
+          <svg class="ic"><use href="#i-play"/></svg><span>Run evaluation</span>
+        </button>
+      </section>
+
+      <section class="panel compact" aria-labelledby="hist-title" id="history-panel" hidden>
+        <div class="panel-head"><h2 id="hist-title">Recent runs</h2></div>
+        <ul class="history" id="history"></ul>
+      </section>
+    </aside>
+
+    <main class="main" id="main" tabindex="-1">
+      <section class="intro" id="intro">
+        <p class="eyebrow">How it works</p>
+        <h1>Every finding is tied to a sentence in a supplier document.</h1>
+        <p class="lede">
+          A LangGraph workflow plans the checks, retrieves evidence with hybrid search, and assesses each requirement.
+          A deterministic reviewer then rejects any conclusion whose quote cannot be found verbatim in a retrieved supplier source.
+        </p>
+        <ol class="pipeline static" aria-label="Workflow steps">
+          <li><span class="node"><span class="n">1</span></span><span class="node-label">Plan</span></li>
+          <li><span class="node"><span class="n">2</span></span><span class="node-label">Retrieve</span></li>
+          <li><span class="node"><span class="n">3</span></span><span class="node-label">Analyse</span></li>
+          <li><span class="node"><span class="n">4</span></span><span class="node-label">Verify</span></li>
+          <li><span class="node"><span class="n">5</span></span><span class="node-label">Route</span></li>
+          <li><span class="node"><span class="n">6</span></span><span class="node-label">Report</span></li>
+        </ol>
+        <div class="legend">
+          <div class="legend-item met">
+            <span class="badge met"><svg class="ic"><use href="#i-check"/></svg>Met</span>
+            <p>A supplier document explicitly states the requirement is satisfied, and the quote is verified.</p>
+          </div>
+          <div class="legend-item gap">
+            <span class="badge gap"><svg class="ic"><use href="#i-gap"/></svg>Gap identified</span>
+            <p>A supplier document explicitly shows it is not satisfied: missing, expired, below threshold or only planned.</p>
+          </div>
+          <div class="legend-item insufficient">
+            <span class="badge insufficient"><svg class="ic"><use href="#i-unknown"/></svg>Insufficient evidence</span>
+            <p>Nothing retrieved settles it. Silence is never treated as compliance.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="run" id="run" hidden aria-live="polite"></section>
+    </main>
+  </div>
+
+  <div class="toasts" id="toasts" aria-live="assertive"></div>
+
+  <dialog class="dialog" id="key-dialog" aria-labelledby="key-title">
+    <form method="dialog" id="key-form">
+      <h3 id="key-title">API key</h3>
+      <p class="muted">This server requires an <code>X-API-Key</code>. The key is kept in this browser tab's session storage only.</p>
+      <input id="key-input" type="password" autocomplete="off" placeholder="Paste key" spellcheck="false">
+      <div class="dialog-actions">
+        <button class="btn ghost" value="cancel" type="submit">Cancel</button>
+        <button class="btn primary" value="save" type="submit" id="key-save">Save</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script type="module" src="/static/app.js"></script>
+</body>
+</html>

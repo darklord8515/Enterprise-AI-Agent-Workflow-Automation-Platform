@@ -1,0 +1,168 @@
+{
+  "provider_mode": "mock",
+  "providers": {
+    "chat": "mock",
+    "embeddings": "mock",
+    "search": "in_memory"
+  },
+  "retrieval_mode": "hybrid",
+  "ingest_ms": 37.6,
+  "summary": {
+    "cases": 2,
+    "workflow_completion": 1.0,
+    "requirements_evaluated": 12,
+    "classification_accuracy": 1.0,
+    "retrieval_recall": 1.0,
+    "citation_precision": 1.0,
+    "expected_evidence_hit": 1.0,
+    "insufficient_evidence_recall": 1.0,
+    "unsupported_claims": 0,
+    "citations_removed_by_reviewer": 0,
+    "forbidden_evidence_leaks": 0,
+    "injection_warning_ok": true,
+    "mean_latency_ms": 13.8,
+    "total_prompt_tokens": 0,
+    "total_completion_tokens": 0,
+    "total_embedding_tokens": 0
+  },
+  "cases": [
+    {
+      "case_id": "halvorsen-policy-extracted",
+      "completed": true,
+      "error": null,
+      "latency_ms": 21.2,
+      "usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "embedding_tokens": 0,
+        "llm_calls": 2
+      },
+      "rows": [
+        {
+          "requirement_id": "REQ-001",
+          "expected": "met",
+          "predicted": "met",
+          "correct": true,
+          "retrieved_expected_file": true,
+          "evidence_hit": true
+        },
+        {
+          "requirement_id": "REQ-002",
+          "expected": "gap_identified",
+          "predicted": "gap_identified",
+          "correct": true,
+          "retrieved_expected_file": true,
+          "evidence_hit": true
+        },
+        {
+          "requirement_id": "REQ-003",
+          "expected": "gap_identified",
+          "predicted": "gap_identified",
+          "correct": true,
+          "retrieved_expected_file": true,
+          "evidence_hit": true
+        },
+        {
+          "requirement_id": "REQ-004",
+          "expected": "insufficient_evidence",
+          "predicted": "insufficient_evidence",
+          "correct": true,
+          "retrieved_expected_file": null,
+          "evidence_hit": null
+        },
+        {
+          "requirement_id": "REQ-005",
+          "expected": "met",
+          "predicted": "met",
+          "correct": true,
+          "retrieved_expected_file": true,
+          "evidence_hit": true
+        },
+        {
+          "requirement_id": "REQ-006",
+          "expected": "met",
+          "predicted": "met",
+          "correct": true,
+          "retrieved_expected_file": true,
+          "evidence_hit": true
+        },
+        {
+          "requirement_id": "REQ-007",
+          "expected": "met",
+          "predicted": "met",
+          "correct": true,
+          "retrieved_expected_file": true,
+          "evidence_hit": true
+        },
+        {
+          "requirement_id": "REQ-008",
+          "expected": "insufficient_evidence",
+          "predicted": "insufficient_evidence",
+          "correct": true,
+          "retrieved_expected_file": null,
+          "evidence_hit": null
+        }
+      ],
+      "injection_warning_ok": true,
+      "forbidden_evidence_leaks": 0,
+      "citations_total": 6,
+      "citations_verbatim": 6,
+      "citations_removed_by_reviewer": 0,
+      "unsupported_claims": 0,
+      "revisions": 0
+    },
+    {
+      "case_id": "brightline-explicit-requirements",
+      "completed": true,
+      "error": null,
+      "latency_ms": 6.3,
+      "usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "embedding_tokens": 0,
+        "llm_calls": 2
+      },
+      "rows": [
+        {
+          "requirement_id": "REQ-001",
+          "expected": "met",
+          "predicted": "met",
+          "correct": true,
+          "retrieved_expected_file": true,
+          "evidence_hit": true
+        },
+        {
+          "requirement_id": "REQ-002",
+          "expected": "met",
+          "predicted": "met",
+          "correct": true,
+          "retrieved_expected_file": true,
+          "evidence_hit": true
+        },
+        {
+          "requirement_id": "REQ-003",
+          "expected": "met",
+          "predicted": "met",
+          "correct": true,
+          "retrieved_expected_file": true,
+          "evidence_hit": true
+        },
+        {
+          "requirement_id": "REQ-004",
+          "expected": "insufficient_evidence",
+          "predicted": "insufficient_evidence",
+          "correct": true,
+          "retrieved_expected_file": null,
+          "evidence_hit": null
+        }
+      ],
+      "injection_warning_ok": true,
+      "forbidden_evidence_leaks": 0,
+      "citations_total": 3,
+      "citations_verbatim": 3,
+      "citations_removed_by_reviewer": 0,
+      "unsupported_claims": 0,
+      "revisions": 0
+    }
+  ]
+}
